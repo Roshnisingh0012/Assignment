@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    // Question-3. What do you mean by Pointers? Write a code how you can initialise the pointer.
+    // A pointer is a variable that stores the memory address of another variable.
+
+    int a = 10;
+    int *ptr;   // pointer declaration
+    ptr = &a;   // pointer initialization
+
+    printf("Value of a: %d\n", a);
+    printf("Address of a: %p\n", &a);
+    printf("Value using pointer: %d\n", *ptr);
+
+    return 0;
+}
+
+
+// OUTPUT Value of a: 10
+Address of a: 0x7ffe44963784
+Value using pointer: 10
