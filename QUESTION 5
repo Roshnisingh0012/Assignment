@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    // Question-4. What are the types of array? Write in a code 1D & 2D included.
+    // Types of Array: 
+    // 1. One Dimensional (1D)
+    // 2. Two Dimensional (2D)
+
+    // 1D Array
+    int arr[5] = {1, 2, 3, 4, 5};
+    printf("1D Array Elements:\n");
+    for(int i=0; i<5; i++)
+        printf("%d ", arr[i]);
+
+    printf("\n\n");
+
+    // 2D Array
+    int mat[2][3] = { {1, 2, 3}, {4, 5, 6} };
+    printf("2D Array Elements:\n");
+    for(int i=0; i<2; i++) {
+        for(int j=0; j<3; j++)
+            printf("%d ", mat[i][j]);
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+
+// OUTPUT: 1D Array Elements:
+1 2 3 4 5 
+
+2D Array Elements:
+1 2 3 
+4 5 6 
