@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+    // Question-5. Explain the types of Operators in code.
+    // Types: Arithmetic, Relational, Logical, Assignment, Increment/Decrement
+
+    int a = 10, b = 5;
+
+    // 1. Arithmetic Operators
+    printf("Arithmetic: %d %d %d %d %d\n", a+b, a-b, a*b, a/b, a%b);
+
+    // 2. Relational Operators
+    printf("Relational: %d %d\n", a>b, a==b);
+
+    // 3. Logical Operators
+    printf("Logical: %d %d\n", (a>b && b>0), (a<b || b>0));
+
+    // 4. Assignment Operator
+    a += 5;
+    printf("Assignment: %d\n", a);
+
+    // 5. Increment/Decrement Operators
+    a++; b--;
+    printf("Inc/Dec: %d %d\n", a, b);
+
+    return 0;
+}
+
+
+//OUTPUT: Arithmetic: 15 5 50 2 0
+Relational: 1 0
+Logical: 1 1
+Assignment: 15
+Inc/Dec: 16 4
