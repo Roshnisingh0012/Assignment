@@ -1,0 +1,32 @@
+Question 2
+
+#include<stdio.h>
+
+// Question-2. What do you mean by functions? Write the types of functions and give one example in code of each type.
+// Function is a block of code used to perform a specific task.
+// Types: 
+// 1. Function with no arguments and no return value
+// 2. Function with arguments and return value
+
+void greet() { // No argument, no return
+    printf("Hello! This is a simple function.\n");
+}
+
+int add(int a, int b) { // With arguments and return
+    return a + b;
+}
+
+int main()
+{
+    greet(); // function call
+
+    int result = add(10, 20);
+    printf("Sum = %d\n", result);
+
+    return 0;
+}
+
+
+
+// OUTPUT IS: Hello! This is a simple function.
+Sum = 30
