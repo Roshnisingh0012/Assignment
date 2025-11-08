@@ -1,0 +1,120 @@
+// Q1. What do you mean by structures?
+#include <stdio.h>
+
+// Structure is a user-defined data type in C that allows us to combine
+// different types of data items under one name.
+struct Student {
+    int roll;
+    char name[50];
+    float marks;
+};
+
+int main() {
+    struct Student s1 = {1, "Akriti", 95.5};
+    printf("Student Roll: %d\n", s1.roll);
+    printf("Student Name: %s\n", s1.name);
+    printf("Student Marks: %.2f\n", s1.marks);
+    return 0;
+}
+
+/* 
+OUTPUT:
+Student Roll: 1
+Student Name: Akriti
+Student Marks: 95.50 */
+
+
+
+
+// Q2. What do you mean by array & pointers array?
+#include <stdio.h>
+
+int main() {
+    // Array: A collection of similar data items stored in contiguous memory locations.
+    int arr[5] = {10, 20, 30, 40, 50};
+
+    // Pointer Array: An array that stores the addresses of other variables.
+    int a = 5, b = 10, c = 15;
+    int *ptrArr[3];  // Array of pointers
+    ptrArr[0] = &a;
+    ptrArr[1] = &b;
+    ptrArr[2] = &c;
+
+    printf("Array Elements: ");
+    for(int i = 0; i < 5; i++)
+        printf("%d ", arr[i]);
+
+    printf("\nPointer Array Elements: ");
+    for(int i = 0; i < 3; i++)
+        printf("%d ", *ptrArr[i]); // Dereferencing pointer
+
+    return 0;
+}
+
+
+/* OUTPUT:
+Array Elements: 10 20 30 40 50 
+Pointer Array Elements: 5 10 15 */
+
+
+
+
+// Q3. Compare two structure variables by using comparison operator (== and !=)
+#include <stdio.h>
+#include <string.h>
+
+struct Student {
+    int roll;
+    char name[50];
+    float marks;
+};
+
+int main() {
+    struct Student s1 = {1, "Akriti", 95.5};
+    struct Student s2 = {2, "Riya", 95.5};
+
+    // Structures cannot be compared directly using == or != in C.
+    // So, we compare each member manually.
+    if (s1.roll == s2.roll && strcmp(s1.name, s2.name) == 0 && s1.marks == s2.marks)
+        printf("Structures are Equal\n");
+    else
+        printf("Structures are Not Equal\n");
+
+    return 0;
+}
+
+
+/* OUTPUT:
+Structures are Not Equal */
+
+
+// Q4. Perform arithmetic operations on structures
+#include <stdio.h>
+
+// Example: Add and average marks of two students using structure.
+struct Student {
+    float marks1;
+    float marks2;
+};
+
+int main() {
+    struct Student s1 = {80.5, 90.0};
+    struct Student s2 = {70.0, 85.5};
+    struct Student result;
+
+    // Performing arithmetic operations
+    result.marks1 = s1.marks1 + s2.marks1;
+    result.marks2 = s1.marks2 + s2.marks2;
+    float average = (result.marks1 + result.marks2) / 4;
+
+    printf("Sum of Marks1: %.2f\n", result.marks1);
+    printf("Sum of Marks2: %.2f\n", result.marks2);
+    printf("Average of All Marks: %.2f\n", average);
+
+    return 0;
+}
+
+/* OUTPUT:
+Sum of Marks1: 150.50
+Sum of Marks2: 175.50
+Average of All Marks: 81.50 */
